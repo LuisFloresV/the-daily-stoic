@@ -1,0 +1,107 @@
+body {
+    font-family: 'Bubbler One', sans-serif;
+    background-image: url('/public/img/Courtains.png');
+    background-size: cover;
+    margin: 0;
+}
+
+button {
+    background-color: rgba(255, 248, 220, 0);
+    border: none;
+    cursor: pointer;
+}
+
+h1,
+h2 {
+    font-family: 'Sahitya', serif;
+}
+
+h1 {
+    animation-duration: 5s;
+    animation-name: fadein;
+    font-size: 1.8rem;
+    margin-bottom: 0%;
+}
+
+.hud {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(253, 253, 253, 0) 76%);
+}
+
+.philosopher {
+    padding: 0% 5%;
+    display: flex;
+    align-items: end;
+    color: white;
+}
+
+.details {
+    margin: 0rem 0rem 2.5rem 1rem;
+}
+
+.details>h2 {
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+.details>p {
+    margin: 0px;
+    opacity: 51%;
+}
+
+.philosopher>img {
+    width: 35vh;
+}
+
+button {
+    padding: 0% 5%;
+}
+
+button>img {
+    height: 1.5rem;
+    margin: 0rem 0rem 4rem 0rem;
+}
+
+.scroll {
+    height: 41vh;
+    margin: 4rem 13rem;
+    padding: 4rem 5rem;
+    background-image: url('/public/img/Scroll.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-duration: 3s;
+    animation-name: unwrap;
+}
+
+@keyframes unwrap {
+    from {
+        width: 0%;
+        opacity: 0%;
+    }
+
+    to {
+        width: 61%;
+        opacity: 100%;
+    }
+}
+
+
+#reflection-text {
+    text-align: justify;
+    animation-duration: 5s;
+    animation-name: fadein;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}

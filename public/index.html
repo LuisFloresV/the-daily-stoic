@@ -2,18 +2,41 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=Sahitya:wght@700&display=swap"
+    rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 
 <body>
+  <section class="scroll">
+    <h1>The daily stoic reflection</h1>
 
-  <h1>The daily stoic reflection</h1>
+    <div class="reflection-container">
+      <p id="reflection-text">Lorem ipsum dolor sit amet consectetur. Suspendisse lacus donec elementum velit. Amet
+        pellentesque tincidunt porttitor sapien et congue. Et purus in amet adipiscing proin. Orci tellus odio volutpat
+        pellentesque accumsan at quis ultricies sit.</p>
+    </div>
+  </section>
 
-  <div class="reflection-container">
-    <p id="reflection-text"></p>
-  </div>
+  <section class="hud">
+    <div class="philosopher">
+      <img src="/public/img/epic pixel 1.png" alt="epictetus">
+      <div class="details">
+        <h2>Epictetus</h2>
+        <p>Greek Stoic philosopher</p>
+      </div>
+
+    </div>
+
+    <button onClick="refresh()">
+      <img src="/public/img/Reload.png" alt="">
+    </button>
+  </section>
 
 </body>
 
