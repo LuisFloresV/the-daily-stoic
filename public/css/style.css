@@ -17,10 +17,12 @@ h2 {
 }
 
 h1 {
-    animation-duration: 5s;
-    animation-name: fadein;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-bottom: 0%;
+}
+
+p {
+    font-size: 1.1rem;
 }
 
 .hud {
@@ -71,37 +73,10 @@ button>img {
     margin: 4rem 13rem;
     padding: 4rem 5rem;
     background-image: url('/public/img/Scroll.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    animation-duration: 3s;
-    animation-name: unwrap;
 }
 
-@keyframes unwrap {
-    from {
-        width: 0%;
-        opacity: 0%;
-    }
-
-    to {
-        width: 61%;
-        opacity: 100%;
-    }
-}
-
-
-#reflection-text {
+.text{
     text-align: justify;
-    animation-duration: 5s;
-    animation-name: fadein;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0%;
-    }
-
-    to {
-        opacity: 100%;
-    }
 }
