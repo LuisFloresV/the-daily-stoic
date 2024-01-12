@@ -1,18 +1,17 @@
 const { readFile } = require('fs/promises');
 const path = require('path');
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
+const { getRandomInt, removeLineBreaks } = require('../utils');
 
 async function getReflections(_req, res) {
   const epictetus = await readFile(path.join(__dirname, 'resources/epictetus.json'), { encoding: 'utf-8' });
   const { reflections } = JSON.parse(epictetus);
 
   const reflectionAvailable = reflections.length;
-  const reflectionIndex = getRandomInt(1, reflectionAvailable);
+  const reflectionIndex = getRandomInt(0, reflectionAvailable - 1);
 
-  res.status(200).json({ reflection: reflections[reflectionIndex].replace(/(\r\n|\n|\r)/gm, '') });
+  const reflection = removeLineBreaks(reflections[reflectionIndex]);
+
+  res.status(200).json({ reflection });
 }
 
 module.exports = { getReflections };
