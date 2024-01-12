@@ -1,6 +1,6 @@
 body {
     font-family: 'Bubbler One', sans-serif;
-    background-image: url('/public/img/Courtains.png');
+    background-image: url('/img/Courtains.png');
     background-size: cover;
     margin: 0;
 }
@@ -72,7 +72,7 @@ button>img {
     height: 41vh;
     margin: 4rem 13rem;
     padding: 4rem 5rem;
-    background-image: url('/public/img/Scroll.png');
+    background-image: url('/img/Scroll.png');
     background-size: contain;
     background-repeat: no-repeat;
 }

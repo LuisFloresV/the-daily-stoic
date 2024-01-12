@@ -1,37 +1,39 @@
-const reflection = document.getElementById('reflection-text');
+/* eslint-disable no-await-in-loop */
+/* eslint-disable no-param-reassign */
+const reflectionText = document.getElementById('reflection-text');
+const refresh = document.getElementById('refresh');
 
+let shouldStop = false;
 
-fetch('/api/reflection')
-  .then((response) => response.json())
-  .then((data) => { reflection.innerText = JSON.stringify(data.reflection); });
-
-function refresh() {
+refresh.addEventListener('click', () => {
   window.location.reload();
+});
+
+function sleep(ms) {
+  return new Promise((resolve) => { setTimeout(resolve, ms); });
 }
 
-const div = document.querySelector(".reflection-text");
-let text = reflection.innerText;
+async function typingAnimation(element, text) {
+  reflectionText.addEventListener('click', () => {
+    shouldStop = true;
+  });
 
-function typingAnimation(element, text, i = 0) {
+  for (let x = 0; x < text.length; x += 1) {
+    if (shouldStop) {
+      reflectionText.innerText = text;
+      break;
+    }
 
-  let timer;
-  reflection.addEventListener("click", () => {
-    reflection.innerText = "Click event";
-    clearTimeout(timer);
-  })
-
-  if (i === 0) {
-    element.textContent = "";
+    element.textContent += text[x];
+    await sleep(10);
   }
-
-  element.textContent += text[i];
-
-  if (i === text.length - 1) {
-    return;
-  }
-
-  timer = setTimeout(() => typingAnimation(element, text, i + 1), 60);
 }
 
-typingAnimation(div, text);
+async function init() {
+  const response = await fetch('/api/reflection');
+  const { reflection } = await response.json();
 
+  await typingAnimation(reflectionText, reflection);
+}
+
+init();
