@@ -1,8 +1,10 @@
 body {
     font-family: 'Bubbler One', sans-serif;
-    background-image: url('/img/Courtains.png');
-    background-size: cover;
+    background-image: url('../img/Courtains.png');
+    background-size: 76%;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 button {
@@ -17,7 +19,7 @@ h2 {
 }
 
 h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     margin-bottom: 0%;
 }
 
@@ -36,7 +38,7 @@ p {
 }
 
 .philosopher {
-    padding: 0% 5%;
+    padding: 0% 6%;
     display: flex;
     align-items: end;
     color: white;
@@ -60,7 +62,7 @@ p {
 }
 
 button {
-    padding: 0% 5%;
+    padding: 0% 6%;
 }
 
 button>img {
@@ -69,14 +71,21 @@ button>img {
 }
 
 .scroll {
-    height: 41vh;
-    margin: 4rem 13rem;
-    padding: 4rem 5rem;
-    background-image: url('/img/Scroll.png');
+    height: 45vh;
+    width: 60%;
+    margin-top: 4rem;
+    padding:5rem 9rem;
+    background-image: url('../img/Scroll.png');
     background-size: contain;
-    background-repeat: no-repeat;
+}
+
+.scroll > h1{
+    color: #1a060aec;
 }
 
 .text{
     text-align: justify;
+    color: #1a0c0f;
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
 }
